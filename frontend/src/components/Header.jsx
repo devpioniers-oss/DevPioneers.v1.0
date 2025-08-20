@@ -1,112 +1,82 @@
-import { useState } from "react";
-import { MdMenu, MdClose } from "react-icons/md";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/devpioneersLogo.png";
-import { motion } from "framer-motion";
+import { IoMenuSharp, IoClose } from "react-icons/io5";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  const navItems = [
+    { name: "Services", path: "/services" },
+    { name: "Solution", path: "/solution" },
+    { name: "Vision", path: "/vision" },
+    { name: "Contact", path: "/contact" },
+  ];
+
   return (
-    <header className="fixed top-0 left-0 w-full 
-      h-16 z-50 flex items-center justify-between  px-2 py-3
-      px-6 border-b border-gray-700 bg-gray-900 text-white">
-      
-      {/* Logo DevPioneers */}
-      <motion.div
-        initial={{ opacity: 1,y:-50 }}
-        animate={{ opacity: 3, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.6, damping: 25 }}
-        className="flex items-center"
-      >
-        <img src={logo} alt="DevPioneers logo" className="h-16 w-auto font-extrabold" />
-      </motion.div>
+    <header className="fixed top-0 left-0 w-full bg-black text-white z-50 shadow-md">
+      <div className="flex items-center justify-between px-6 py-4 md:px-16">
+        
+        {/* Logo */}
+        <Link to="/">
+          <img
+            src={logo}
+            alt="DevPioneers Logo"
+            className="w-36 md:w-48 lg:w-56"
+          />
+        </Link>
 
-     {/* Navigation desktop */}
-<motion.nav 
-  initial="hidden"
-  animate="visible"
-  variants={{
-    hidden: { opacity: 0, y: -20 },
-    visible: {opacity: 1,y: 0},
-    transition: {delayChildren: 0.4, staggerChildren: 0.2,   }
-  }}
-  className="hidden md:flex space-x-6"
->
-        {["Services", "Solution", "Vision", "Contact"].map((item, index) => (
-          <a
-            key={index}
-            href="#"
-            className="hover:text-blue-400 transition space-x-4 text-1xl"
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              className="text-lg hover:text-sky-400 transition"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            className="ml-4 px-5 py-2 bg-gradient-to-r from-blue-600 to-sky-400 rounded-lg font-semibold hover:from-blue-700 hover:to-sky-500 transition"
           >
-            {item}
-          </a>
-        ))}
-      </motion.nav>
+            Commencer
+          </Link>
+        </div>
 
-      {/* Bouton commencer */}
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.6, damping: 20 }}
-        className="hidden md:block"
-      >
-        <a
-          href="#"
-          className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 text-1xl rounded-lg transition"
-        >
-          Commencer
-        </a>
-      </motion.div>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden text-3xl" onClick={toggleMenu}>
+          {isOpen ? <IoClose /> : <IoMenuSharp />}
+        </div>
+      </div>
 
-      {/* Mobile menu button */}
-      <button onClick={toggleMenu} className="md:hidden text-2xl">
-        {isOpen ? <MdClose /> : <MdMenu />}
-      </button>
-
-      {/* Mobile menu dropdown */}
+      {/* Mobile Menu */}
       {isOpen && (
-        <motion.div
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  exit={{ opacity: 0, y: -20 }}
-  transition={{ duration: 0.4 }}
-  className="absolute top-16 left-1 right-1
-             w-[100%] bg-gray-800 
-             flex flex-col items-start space-y-4 
-             py-6  shadow-lg 
-             border border-gray-700"
->
-  {["Services", "Solution", "Vision", "Contact"].map((item, index) => (
-    <motion.a
-      key={index}
-      href="#"
-      className="text-lg text-gray-200  hover:text-blue-400 transition"
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2 * index }}
-      onClick={() => setIsOpen(false)}
-    >
-      {item}
-    </motion.a>
-  ))}
-
-  <motion.a
-    href="#"
-    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 
-               rounded-lg transition shadow-md"
-    initial={{ opacity: 0, y: -10 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.2 * (["Services", "Solution", "Vision", "Contact"].length) }}
-    onClick={() => setIsOpen(false)}
-  >
-    Commencer
-  </motion.a>
-</motion.div>
-
+        <div className="md:hidden bg-black/90 backdrop-blur-md px-6 py-4 space-y-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.name}
+              to={item.path}
+              onClick={() => setIsOpen(false)}
+              className="block text-gray-200 hover:text-white"
+            >
+              {item.name}
+            </Link>
+          ))}
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className="block mt-2 px-5 py-2 bg-gradient-to-r from-sky-500 to-violet-600 text-white rounded-full text-center"
+          >
+            Commencer
+          </Link>
+        </div>
       )}
     </header>
   );
 };
 
 export default Header;
+{/**/}
