@@ -1,7 +1,13 @@
 import React from "react"
 import { motion } from "framer-motion"
-
+import { Link } from "react-router-dom"
 const Section1 = () => {
+  const navItems = [
+    { name: "Services", path: "/services" },
+    { name: "Solution", path: "/solution" },
+    { name: "Vision", path: "/vision" },
+    { name: "Contact", path: "/contact" },
+  ];
   return (
     <motion.section
       initial={{ opacity: 0, y: -80 }}
@@ -36,17 +42,18 @@ const Section1 = () => {
            A PROSPORER DANS LE MONDE NUM2RIQUE MODERNE
         </p>
 
-        {/* CTA */}
-        <motion.a
-          href="#"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="inline-block px-6 py-3 bg-gradient-to-r md-w-[30vw] text-center
-           from-blue-600 to-sky-400 text-white font-bold rounded-lg 
-           shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300"
-        >
-          En savoir plus
-        </motion.a>
+      {/* CTA */}
+<Link to="/services">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="inline-block px-6 py-3 bg-gradient-to-r md:w-[30vw] text-center
+     from-blue-600 to-sky-400 text-white font-bold rounded-lg 
+     shadow-md hover:from-blue-700 hover:to-sky-500 transition-all duration-300"
+  >
+    En savoir plus
+  </motion.div>
+</Link>
       </motion.div>
     </motion.section>
   )

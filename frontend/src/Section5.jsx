@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-
+import { Link } from 'react-router-dom'
 const Section5 = () => {
   return (
     <motion.section
@@ -40,15 +40,20 @@ const Section5 = () => {
         </p>
 
         {/* Bouton */}
+        <Link
+         to="/contact"
+         className='w-[50%]'
+        >
         <a
               href="#"
               className="inline-block px-6 py-3 rounded-xl text-lg font-semibold 
-                         text-white bg-gradient-to-r from-green-500 to-green-600 w-[50%] 
+                         text-white bg-gradient-to-r from-green-500 to-green-600 w-[90%] 
                          hover:scale-105 transform transition duration-300 shadow-lg 
                          text-center item-center"
             >
                Nous Rejoindre
             </a>
+        </Link>
       </motion.div>
     </motion.section>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import {motion} from "framer-motion"
+import { Link } from 'react-router-dom'
 const Section3 = () => {
   
   return (
@@ -29,11 +30,16 @@ const Section3 = () => {
                       >Application web</h1>
                     <p className="mt-10 text-1xl text-white">Site web dynamique avec CMS personnalisé</p>
                     <div className='mb-4 mt-15'>
+                       <Link
+                        to="/services"
+                       >
                        <a 
                        href=""
                        className='border px-3 py-3 bg-gradient-to-r from-gray-500 rounded-xl mt-6 to-sky-500 text-white'>
                         Demander Un Devis
                        </a>
+                       
+                       </Link>
                     </div>
                        <h5 className='text-1xl mt-16 text-white'>
                         Audit stratégique + prototypage UX/UI
@@ -55,11 +61,16 @@ const Section3 = () => {
                       >site  vitrine</h1>
                       <p className="mt-10 text-2xl text-white"> Création d’un site vitrine responsive</p>
                       <div className='mt-15 mb-4 '>
-                         <a 
+                       <Link
+                        to="/services"
+                       >
+                       <a 
                        href=""
                        className='border px-3 py-3 bg-gradient-to-r from-gray-500 rounded-xl mt-6 to-sky-500 text-white'>
                         Demander Un Devis
                        </a>
+                       
+                       </Link>
                       </div>
                        <h5 className='text-1xl mt-16 text-white'>
                          Intégration de base SEO
@@ -80,11 +91,16 @@ const Section3 = () => {
                       >Site E-commerce</h1>
                       <p className="mt-10 text-1xl text-white">site professional avec des fonctionnalité </p>
                           <div className='mb-4 mt-15'>
-                              <a 
+                               <Link
+                        to="/services"
+                       >
+                       <a 
                        href=""
-                       className='border px-3 py-3 bg-gradient-to-r from-gray-500 rounded-xl  to-sky-500 text-white'>
+                       className='border px-3 py-3 bg-gradient-to-r from-gray-500 rounded-xl mt-6 to-sky-500 text-white'>
                         Demander Un Devis
                        </a>
+                       
+                       </Link>
                           </div>
                        <h5 className='text-1xl mt-16 text-white'> 
                         Site web dynamique avec CMS personnalisé

@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-
+import { Link } from 'react-router-dom'
 const Section6 = () => {
   return (
     <>
@@ -59,6 +59,9 @@ const Section6 = () => {
             }}
             transition={{ type: "spring", stiffness: 120, damping: 15 }}
           >
+           <Link
+           to="/vision"
+           >
             <a
               href="#"
               className="inline-block px-6 py-3 rounded-xl text-lg font-semibold 
@@ -67,6 +70,8 @@ const Section6 = () => {
             >
               Voir plus
             </a>
+           </Link>
+
           </motion.div>
         </motion.div>
       </motion.section>
