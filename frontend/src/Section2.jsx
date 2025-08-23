@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaDesktop, FaDatabase, FaShopify } from "react-icons/fa";
 
-// ✅ Variants pour container et cards
 const containerVariants = {
   hidden: { opacity: 0, y: 40 },
   visible: {
@@ -34,14 +33,14 @@ const Section2 = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
       variants={containerVariants}
-      className="mt-[100px] bg-gradient-to-r from-blue-300 to-sky-900 
-                 w-[90%] mx-auto rounded-xl shadow-lg px-8 py-12 
-                 flex flex-col justify-center min-h-[70vh]"
+  className="mt-[100px] max-w-7xl mx-auto px-6 py-12 flex flex-col
+   justify-center min-h-[70vh] bg-gradient-to-r from-blue-300 to-sky-900 rounded-xl shadow-lg"
+
     >
       <motion.div
         id="Section2"
         variants={containerVariants}
-        className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8"
+        className="grid grid-flow-col grid-rows-4 gap-6 space-x-8"
       >
         {/* Card 1 */}
         <motion.div
@@ -56,10 +55,12 @@ const Section2 = () => {
           <h1 className="text-2xl font-extrabold text-white mb-2">
             Site vitrine
           </h1>
-          <p className="text-lg text-gray-200">
-            Un site vitrine moderne et professionnel pour présenter vos
-            services et renforcer l’image de votre marque.
-          </p>
+         <p className="text-lg text-gray-200">
+              Un site vitrine moderne, élégant et optimisé pour le référencement naturel (SEO),
+               conçu pour captiver vos visiteurs, valoriser votre expertise et renforcer la 
+               crédibilité de votre marque dès le premier regard.
+        </p>
+
         </motion.div>
 
         {/* Card 2 */}
@@ -75,10 +76,12 @@ const Section2 = () => {
           <h1 className="text-2xl font-extrabold text-white mb-2">
             Application web
           </h1>
-          <p className="text-lg text-gray-200">
-            Création d’applications web sur mesure, performantes et
-            adaptées à vos besoins spécifiques.
-          </p>
+         <p className="text-lg text-gray-200">
+           Développement d’applications web sur mesure, sécurisées et évolutives, intégrant des fonctionnalités
+           avancées (authentification, dashboard, API, etc.) pour automatiser vos processus et améliorer votre
+           productivité.
+        </p>
+
         </motion.div>
 
         {/* Card 3 */}
@@ -94,10 +97,12 @@ const Section2 = () => {
           <h1 className="text-2xl font-extrabold text-white mb-2">
             E-commerce
           </h1>
-          <p className="text-lg text-gray-200">
-            Conception de boutiques en ligne modernes et responsives,
-            mettant en valeur votre activité.
-          </p>
+         <p className="text-lg text-gray-200">
+         Création de boutiques en ligne performantes, avec une expérience utilisateur fluide,
+          un design responsive, une gestion simplifiée des produits et des paiements, 
+          pour booster vos ventes et fidéliser vos clients.
+         </p>
+
         </motion.div>
       </motion.div>
     </motion.section>

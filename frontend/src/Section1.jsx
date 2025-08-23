@@ -1,6 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+
 const Section1 = () => {
   const navItems = [
     { name: "Services", path: "/services" },
@@ -32,7 +33,7 @@ const Section1 = () => {
       }}
       className="flex flex-col items-start justify-center space-y-6 max-w-3xl">
         {/* Titre */}
-        <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-snug">
+        <h1 className="text-3xl md:text-5xl font-extrabold list-disc text-white leading-snug">
             TRANSFORMER VOTRE ENTREPRISE  AVEC DES SOLUTION NUMERIQUE INNOVANTE       
          </h1>
 

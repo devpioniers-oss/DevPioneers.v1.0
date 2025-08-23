@@ -29,98 +29,105 @@ const cardVariants = {
 
 const Vision = () => {
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.2 }}
-      variants={containerVariants}
-      className="mt-[100px] min-h-[90vh]"
+   <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, amount: 0.2 }}
+    variants={containerVariants}
+    className="min-h-[90vh]"
+  >
+    {/* Titre */}
+    <motion.h1
+      variants={cardVariants}
+      className="text-4xl sm:text-5xl lg:text-6xl font-bold  text-white"
     >
-      {/*  Titre */}
-      <motion.h1
-        variants={cardVariants}
-        className="text-6xl mx-10 mt-16 text-white"
-      >
-        Nos Vision
-      </motion.h1>
-      <motion.hr
-        variants={cardVariants}
-        className="mt-5 p-6 border-gray-400"
-      />
+      Nos Visions
+    </motion.h1>
 
-      {/*  Première ligne */}
+    <hr className='mt-10 w-[100%]'/>
+
+    {/* Grid principale */}
+    <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8">
+      {/* Inclusion Digitale */}
       <motion.div
-        variants={containerVariants}
-        className="flex flex-wrap justify-center items-center gap-5 mt-10"
+        variants={cardVariants}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
+                   rounded-xl shadow-lg text-center text-white p-6"
       >
-        <motion.div
-          variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
-                     w-[40%] h-[60vh] rounded-xl shadow-lg text-center text-white"
-        >
-          <h1 className='text-4xl font-bold mt-10'>Inclusion Digitale</h1>
-          <h4 className='text-2xl mt-10'>Rendre la technologie accessible à tous, 
-           quel que soit le niveau social, géographique ou éducatif.</h4>
-          <p className='mt-10 text-xl'>Objectif : Combler la fracture numérique en Afrique
-Actions : Solutions simples, multilingues, accessibles sur mobile
-Impact : Autonomisation des citoyens, accès à l’information, à l’éducation et aux services</p>
-        </motion.div>
-
-        <motion.div
-          variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
-                     w-[40%] h-[60vh] rounded-xl shadow-lg text-white text-center"
-        >
-          {/*  contenu */}
-          <h1 className='text-4xl font-bold mt-10'>Innovation Utile</h1>
-          <h4 className='text-2xl mt-10'>Créer des solutions qui répondent à des besoins réels
-              et qui transforment le quotidien.</h4>
-          <p className='mt-10 text-xl'>Objectif : Prioriser l’impact avant la complexité technique
-             Actions  Applications pour la santé, l’agriculture, l’éducation, le commerce local
-             Impact  Amélioration directe de la qualité de vie et des services</p>
-        </motion.div>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4">Inclusion Digitale</h1>
+        <h4 className="text-lg sm:text-xl mt-6">
+          Rendre la technologie accessible à tous, quel que soit le niveau social, géographique ou éducatif.
+        </h4>
+        <p className="mt-6 text-base sm:text-lg">
+          <strong>Objectif :</strong> Combler la fracture numérique en Afrique <br />
+          <strong>Actions :</strong> Solutions simples, multilingues, accessibles sur mobile <br />
+          <strong>Impact :</strong> Autonomisation des citoyens, accès à l’information, à l’éducation et aux services
+        </p>
       </motion.div>
 
-      {/*  Deuxième ligne */}
+      {/* Innovation Utile */}
       <motion.div
-        variants={containerVariants}
-        className="flex flex-wrap justify-center items-center gap-5 mt-10 text-white item-center"
+        variants={cardVariants}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
+                   rounded-xl shadow-lg text-center text-white p-6"
       >
-        <motion.div
-          variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
-                     w-[40%] h-[60vh] rounded-xl shadow-lg item-center text-center"
-        >
-          {/*  contenu */}
-          <h1 className='text-4xl font-bold mt-10'> Technologie Responsable</h1>
-          <h4 className='text-2xl mt-10'>Développer avec éthique, durabilité et sécurité.</h4>
-          <p className='mt-10 text-xl'> Objectif : Créer des outils qui respectent les données, les cultures et les usages locaux
-Actions : Hébergement sécurisé, respect de la vie privée, design inclusif
-Impact : Confiance des utilisateurs, adoption durable</p>
-        </motion.div>
-
-        <motion.div
-          variants={cardVariants}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.97 }}
-          className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
-                     w-[40%] h-[60vh] rounded-xl shadow-lg item-center text-center"
-        >
-          {/*  contenu */}
-          <h1 className='text-4xl font-bold mt-10'> Automatisation Intelligente</h1>
-          <h4 className='text-2xl mt-10'>Former, inspirer et équiper les talents africains pour qu’ils deviennent acteurs du changement.</h4>
-          <p className='mt-10 text-xl'>Objectif : Créer un écosystème tech africain fort
-Actions : Ateliers, partenariats, mentorat, open source
-Impact : Création d’emplois, montée en compétence, innovation locale</p>
-        </motion.div>
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4">Innovation Utile</h1>
+        <h4 className="text-lg sm:text-xl mt-6">
+          Créer des solutions qui répondent à des besoins réels et qui transforment le quotidien.
+        </h4>
+        <p className="mt-6 text-base sm:text-lg">
+          <strong>Objectif :</strong> Prioriser l’impact avant la complexité technique <br />
+          <strong>Actions :</strong> Santé, agriculture, éducation, commerce local <br />
+          <strong>Impact :</strong> Amélioration directe de la qualité de vie et des services
+        </p>
       </motion.div>
-    </motion.div>
+
+      {/* Technologie Responsable */}
+      <motion.div
+        variants={cardVariants}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
+                   rounded-xl shadow-lg text-center text-white p-6"
+      >
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4">Technologie Responsable</h1>
+        <h4 className="text-lg sm:text-xl mt-6">
+          Développer avec éthique, durabilité et sécurité.
+        </h4>
+        <p className="mt-6 text-base sm:text-lg">
+          <strong>Objectif :</strong> Respect des données et cultures locales <br />
+          <strong>Actions :</strong> Sécurité, vie privée, design inclusif <br />
+          <strong>Impact :</strong> Confiance et adoption durable
+        </p>
+      </motion.div>
+
+      {/* Automatisation Intelligente */}
+      <motion.div
+        variants={cardVariants}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.97 }}
+        className="border border-gray-300 bg-gradient-to-r from-blue-700 to-sky-900 
+                   rounded-xl shadow-lg text-center text-white p-6"
+      >
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mt-4">Automatisation Intelligente</h1>
+        <h4 className="text-lg sm:text-xl mt-6">
+          Former, inspirer et équiper les talents africains pour qu’ils deviennent acteurs du changement.
+        </h4>
+        <p className="mt-6 text-base sm:text-lg">
+          <strong>Objectif :</strong> Créer un écosystème tech africain fort <br />
+          <strong>Actions :</strong> Ateliers, partenariats, mentorat, open source <br />
+          <strong>Impact :</strong> Création d’emplois, montée en compétence, innovation locale
+        </p>
+      </motion.div>
+    </div>
+  </motion.div>
+</div>
+
   )
 }
 

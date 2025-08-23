@@ -12,6 +12,7 @@ const Header = () => {
     { name: "Solution", path: "/solution" },
     { name: "Vision", path: "/vision" },
     { name: "Contact", path: "/contact" },
+    { name: "Devis", path: "/devis" }
   ];
 
   return (
@@ -23,12 +24,12 @@ const Header = () => {
           <img
             src={logo}
             alt="DevPioneers Logo"
-            className="w-36 md:w-48 lg:w-56"
+            className="w-36 md:w-48 lg:w-56 "
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-3">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -70,7 +71,7 @@ const Header = () => {
             onClick={() => setIsOpen(false)}
             className="block mt-2 px-5 py-2 bg-gradient-to-r from-sky-500 to-violet-600 text-white rounded-full text-center"
           >
-            Commencer
+            contacter
           </Link>
         </div>
       )}

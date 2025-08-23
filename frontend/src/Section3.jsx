@@ -28,8 +28,12 @@ const Section3 = () => {
                       <h1 
                       className='text-white font-semibold text-3xl'
                       >Application web</h1>
-                    <p className="mt-10 text-1xl text-white">Site web dynamique avec CMS personnalisé</p>
-                    <div className='mb-4 mt-15'>
+                       <p className="mt-10 text-3xl text-white">
+                      Développement d’applications web dynamiques avec CMS personnalisé, 
+                      conçues pour automatiser vos processus métier, améliorer l’expérience utilisateur
+                      et garantir une évolutivité optimale.
+                       </p>                
+                  <div className='mb-4 mt-15'>
                        <Link
                         to="/services"
                        >
@@ -41,12 +45,14 @@ const Section3 = () => {
                        
                        </Link>
                     </div>
-                       <h5 className='text-1xl mt-16 text-white'>
-                        Audit stratégique + prototypage UX/UI
-                        Développement full-stack sur mesure
-                        Intégration API tierces (CRM, ERP, etc.)
-                         Maintenance évolutive + support premium
-                       </h5>
+                     
+                     <h5 className='text-3xl mt-16 text-white'>
+                       Audit stratégique & prototypage UX/UI<br/>
+                       Développement full-stack sur mesure<br/>
+                       Intégration d’API tierces (CRM, ERP, etc.)<br/>
+                       Maintenance évolutive & support premium
+                      </h5>
+
           </motion.div>
           <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -59,8 +65,12 @@ const Section3 = () => {
                      <h1 
                       className='text-white font-semibold text-3xl'
                       >site  vitrine</h1>
-                      <p className="mt-10 text-2xl text-white"> Création d’un site vitrine responsive</p>
-                      <div className='mt-15 mb-4 '>
+                       <p className="mt-10 text-3xl text-white">
+                        Création de sites vitrines responsives, élégants et optimisés pour
+                         le référencement naturel, afin de valoriser votre image de marque et
+                          capter l’attention de vos visiteurs dès la première seconde.
+                         </p>     
+                                      <div className='mt-15 mb-4 '>
                        <Link
                         to="/services"
                        >
@@ -72,11 +82,13 @@ const Section3 = () => {
                        
                        </Link>
                       </div>
-                       <h5 className='text-1xl mt-16 text-white'>
-                         Intégration de base SEO
-                         Hébergement + nom de domaine inclus
-                         Support technique 30 jours
+                    
+                      <h5 className='text-3xl mt-16 text-white'>
+                       SEO de base intégré<br/>
+                       Hébergement + nom de domaine inclus<br/>
+                       Support technique pendant 30 jours
                        </h5>
+
           </motion.div>
           <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -89,8 +101,12 @@ const Section3 = () => {
                    <h1 
                       className='text-white font-semibold text-3xl'
                       >Site E-commerce</h1>
-                      <p className="mt-10 text-1xl text-white">site professional avec des fonctionnalité </p>
-                          <div className='mb-4 mt-15'>
+              <p className="mt-10 text-3xl text-white">
+                Conception de boutiques en ligne professionnelles avec fonctionnalités avancées,
+                 pour booster vos ventes, simplifier la gestion des produits et offrir une expérience
+                  client fluide.
+                   </p>                     
+                     <div className='mb-4 mt-15'>
                                <Link
                         to="/services"
                        >
@@ -102,12 +118,11 @@ const Section3 = () => {
                        
                        </Link>
                           </div>
-                       <h5 className='text-1xl mt-16 text-white'> 
-                        Site web dynamique avec CMS personnalisé
-                        Automatisation des tâches (formulaires, newsletters, etc.)
-                        Optimisation SEO avancée
-                       </h5>
-                       
+                           <h5 className='text-3xl mt-16 text-white'>
+                             CMS personnalisé & gestion intuitive<br/>
+                             Automatisation (formulaires, newsletters, etc.)<br/>
+                             Optimisation SEO avancée
+                             </h5>
           </motion.div>
          </motion.div>
       </motion.section>
